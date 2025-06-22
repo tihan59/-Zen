@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zenthionix - Professional Website & Product Marketing</title>
+  <style>
+    /* --- Reset & base --- */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #003366 0%, #00bcd4 100%);
+      color: #f0f8ff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a {
+      color: #00e5ff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* --- Container --- */
+    .container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    /* --- Header --- */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    header .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      font-style: italic;
+      user-select: none;
+    }
+    header nav a {
+      margin-left: 2rem;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+      margin: 3rem 0;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 1.5rem auto;
+      line-height: 1.6;
+    }
+    .btn-contact {
+      background: #00e5ff;
+      color: #003366;
+      font-weight: 700;
+      padding: 0.75rem 2rem;
+      border-radius: 30px;
+      cursor: pointer;
+      border: none;
+      transition: background 0.3s ease;
+      font-size: 1.1rem;
+    }
+    .btn-contact:hover {
+      background: #00acc1;
+      color: #e0f7fa;
+    }
+
+    /* --- Services Section --- */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    .service-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 1.5rem;
+      box-shadow: 0 0 15px rgba(0, 188, 212, 0.3);
+      transition: transform 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px #00bcd4;
+    }
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #00e5ff;
+    }
+    .service-card p {
+      font-size: 1rem;
+      line-height: 1.4;
+      color: #cceeff;
+    }
+
+    /* --- Contact Section --- */
+    .contact {
+      background: rgba(0, 0, 0, 0.25);
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0, 188, 212, 0.4);
+    }
+    .contact h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #00e5ff;
+    }
+    .contact p {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #cceeff;
+    }
+
+    /* --- Footer --- */
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      background: rgba(0,0,0,0.15);
+      color: #99d9ff;
+      font-size: 0.9rem;
+      user-select: none;
+    }
+
+    /* --- Background animation shapes --- */
+    .background-shapes {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .shape {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(0, 188, 212, 0.15);
+      animation: float 20s infinite ease-in-out;
+      filter: blur(12px);
+    }
+    .shape1 {
+      width: 150px;
+      height: 150px;
+      top: 10%;
+      left: 15%;
+      animation-delay: 0s;
+    }
+    .shape2 {
+      width: 220px;
+      height: 220px;
+      top: 40%;
+      left: 75%;
+      animation-delay: 6s;
+    }
+    .shape3 {
+      width: 120px;
+      height: 120px;
+      top: 70%;
+      left: 40%;
+      animation-delay: 12s;
+    }
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0) translateX(0);
+      }
+      50% {
+        transform: translateY(-40px) translateX(30px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background-shapes">
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+  </div>
+
+  <header class="container" role="banner">
+    <div class="logo" aria-label="Zenthionix Logo">Zenthionix</div>
+    <nav aria-label="Primary Navigation">
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container" role="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">Professional Website & Product Marketing</h1>
+      <p>
+        Welcome to <strong>Zenthionix</strong>, your partner in creating stunning, responsive websites and effective digital marketing strategies to grow your business online.
+      </p>
+      <button class="btn-contact" onclick="window.location.href='mailto:zenthionixhelp@gmail.com'">
+        Contact Us
+      </button>
+    </section>
+
+    <section id="services" class="services" aria-label="Our Services">
+      <article class="service-card">
+        <h3>Website Development</h3>
+        <p>Responsive, SEO-friendly, and modern websites tailored to showcase your brand and products flawlessly.</p>
+      </article>
+      <article class="service-card">
+        <h3>Product Marketing</h3>
+        <p>Comprehensive e-commerce solutions, product listing, and marketing strategies to boost your sales and brand visibility.</p>
+      </article>
+      <article class="service-card">
+        <h3>Branding & Digital Creativity</h3>
+        <p>Unique branding solutions including logo design and digital campaigns that set your business apart.</p>
+      </article>
+    </section>
+
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Get in Touch</h2>
+      <p>WhatsApp: <a href="https://wa.me/8801878376588" target="_blank" rel="noopener">+8801878376588</a></p>
+      <p>Email: <a href="mailto:zenthionixhelp@gmail.com">zenthionixhelp@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    &copy; 2025 Zenthionix. All rights reserved.
+  </footer>
+
+</body>
+</html>
